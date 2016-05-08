@@ -13,4 +13,8 @@ window.onload = () => {
   decBtn.addEventListener('click', () => {
     number.innerHTML = dec(+number.innerHTML);
   }, false);
+
+  fetch('http://omdbapi.com/?s=saw')
+  .then(response => response.json())
+  .then(data => console.log(data));
 };
