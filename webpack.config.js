@@ -6,6 +6,9 @@ var path = require('path');
 module.exports = {
   debug: true,
   devtool: '#eval-source-map',
+  eslint: {
+    configFile: './.eslintrc'
+  },
 
   entry: [
     './src/main'
@@ -37,7 +40,11 @@ module.exports = {
           plugins: ['transform-runtime'],
           presets: ['es2015', 'stage-0'],
         }
-      },
+      }, {
+        loader: "eslint-loader",
+        test: /\.jsx?$/,
+        exclude: /node_modules/
+      }
     ]
   }
 };
