@@ -2,6 +2,7 @@
 // webpack and webpack-hot-middleware documentation
 var webpack = require('webpack');
 var path = require('path');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
   debug: true,
@@ -9,6 +10,9 @@ module.exports = {
   eslint: {
     configFile: './.eslintrc'
   },
+  postcss: [
+    autoprefixer({ browsers: ['last 2 versions'] })
+  ],
 
   entry: [
     './src/main'
@@ -45,7 +49,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/
       }, {
-        loaders: ["style", "css", "sass"],
+        loader: "style-loader!css-loader!sass-loader!postcss-loader",
         test: /\.scss$/
       }
     ]

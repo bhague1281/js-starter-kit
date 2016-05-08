@@ -1,6 +1,7 @@
 $my-font: sans-serif;
 
 body {
+  display: flex;
   font-family: $my-font;
   background-color: salmon;
   color: rebeccapurple;
