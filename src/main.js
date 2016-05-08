@@ -1,4 +1,5 @@
 import {inc, dec} from './actions';
+import '../stylesheets/main.scss';
 
 window.onload = () => {
   let number = document.getElementById('number');
