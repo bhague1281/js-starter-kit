@@ -35,7 +35,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        loader: "babel-loader",
+        loader: 'babel-loader',
 
         // Only run `.js` and `.jsx` files through Babel
         test: /\.jsx?$/,
@@ -48,11 +48,11 @@ module.exports = {
           presets: ['es2015', 'stage-0'],
         }
       }, {
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
         test: /\.jsx?$/,
         exclude: /node_modules/
       }, {
-        loader: "style-loader!css-loader!sass-loader!postcss-loader",
+        loader: 'style-loader!css-loader!sass-loader!postcss-loader',
         test: /\.scss$/
       }
     ]
