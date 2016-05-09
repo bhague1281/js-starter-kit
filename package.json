@@ -6,7 +6,9 @@
   "author": "Shane Osbourne",
   "license": "MIT",
   "scripts": {
-    "start": "node app"
+    "start": "node app",
+    "build": "node_modules/webpack/bin/webpack.js",
+    "deploy": "npm run build && git subtree push --prefix app origin gh-pages"
   },
   "dependencies": {},
   "devDependencies": {
