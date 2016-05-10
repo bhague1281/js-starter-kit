@@ -1,4 +1,5 @@
 {
+  "extends": "airbnb",
   "parserOptions": {
   "sourceType": "module",
     "ecmaFeatures": {

@@ -1,10 +1,10 @@
-import {inc, dec} from './actions';
+import { inc, dec } from './actions';
 import '../stylesheets/main.scss';
 
 window.onload = () => {
-  let number = document.getElementById('number');
-  let incBtn = document.getElementById('inc');
-  let decBtn = document.getElementById('dec');
+  const number = document.getElementById('number');
+  const incBtn = document.getElementById('inc');
+  const decBtn = document.getElementById('dec');
 
   incBtn.addEventListener('click', () => {
     number.innerHTML = inc(+number.innerHTML);
@@ -13,8 +13,4 @@ window.onload = () => {
   decBtn.addEventListener('click', () => {
     number.innerHTML = dec(+number.innerHTML);
   }, false);
-
-  fetch('http://omdbapi.com/?s=saw')
-  .then(response => response.json())
-  .then(data => console.log(data));
 };

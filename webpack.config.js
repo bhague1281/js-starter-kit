@@ -8,7 +8,8 @@ module.exports = {
   debug: true,
   devtool: '#eval-source-map',
   eslint: {
-    configFile: './.eslintrc'
+    configFile: './.eslintrc',
+    fix: true
   },
   postcss: [
     autoprefixer({ browsers: ['last 2 versions'] })
